@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary: #4a90e2;
+  --secondary: #6c5ce7;
+}
+
+body {
+  @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased transition-colors duration-500;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+}
+
+.card-glass {
+  @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-[24px] transition-colors duration-500;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
